@@ -1,0 +1,1 @@
+# App para consultar el clima de lugares o ciudades, usando Node JS
