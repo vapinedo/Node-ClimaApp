@@ -1,3 +1,5 @@
+const axios = require("axios");
+
 class Busqueda {
     historial = ["Tegucigalpa", "Madrid", "Bogota", "Buenos Aires"];
 
@@ -6,9 +8,13 @@ class Busqueda {
     }
 
     async buscarCiudad(nombreCiudad = "") {
-        // http request
-        console.log(nombreCiudad);
-        return []; // lista de ciudades
+        try {
+            const response = await axios.get("https://reqres.in/api/users?page=2");
+            console.log(response.data);
+            return [];
+        } catch (error) {
+            return [];
+        }
     }
 }
 module.exports = Busqueda;

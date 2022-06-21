@@ -9,8 +9,8 @@ const main = async () => {
     option = await inquirerMenu();
     switch (option) {
         case 1:
-            const lugar = await leerInput("Escriba el nombre de una ciudad");
-            console.log(lugar);
+            const nombreCiudad = await leerInput("Escriba el nombre de una ciudad");
+            await busquedas.buscarCiudad(nombreCiudad);
 
             console.log("\n Información de la ciudad\n".green);
             console.log("Ciudad:", )
